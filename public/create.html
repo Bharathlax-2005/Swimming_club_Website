@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="text-align: center;">Application form</title>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .form-check-input[type="checkbox"] {
+            margin-top: 0.3rem;
+        }
+
+        .form-check-label {
+            margin-left: 5px;
+        }
+
+        .application-form {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Application Form</h1>
+        <form action="/create" method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="fatherName" class="form-label">S/O</label>
+            <input type="text" class="form-control" id="fatherName" name="fatherName" required>
+          </div>
+          <div class="mb-3">
+            <label for="dob" class="form-label">Date of Birth</label>
+            <input type="date" class="form-control" id="dob" name="dob" required>
+          </div>
+          <div class="mb-3">
+            <label for="address" class="form-label">Residential Address</label>
+            <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="contact" class="form-label">Contact Number</label>
+            <input type="tel" class="form-control" id="contact" name="contact" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="medicalRecord" class="form-label">Medical Record</label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Epilepsy" id="epilepsy" name="medicalRecord[]">
+              <label class="form-check-label" for="epilepsy">Epilepsy</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Fibromyalgia" id="fibromyalgia" name="medicalRecord[]">
+              <label class="form-check-label" for="fibromyalgia">Fibromyalgia</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Other" id="other" name="medicalRecord[]">
+              <label class="form-check-label" for="other">Other</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="applyDate" class="form-label">Apply Date</label>
+            <input type="date" class="form-control" id="applyDate" name="applyDate" required>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="termsConditions" required>
+            <label class="form-check-label" for="termsConditions">I agree to the <a href="#">terms and conditions</a></label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        
+    </form>
+</div>
+</body>
+</html>
